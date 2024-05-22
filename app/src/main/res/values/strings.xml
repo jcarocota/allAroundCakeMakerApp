@@ -16,6 +16,8 @@
     <string name="red_velvet">Red Velvet</string>
     <string name="salted_caramel">Caramelo Salado</string>
     <string name="coffee">Café</string>
+    <string name="extra_instructions">Otras instrucciones</string>
+    <string name="pickup_instructions">Comentarios de recolección</string>
 
     <string name="one_cupcake">1 cupcake</string>
     <string name="six_cupcakes">6 cupcakes</string>
@@ -35,7 +37,7 @@
         <item quantity="other">%d cupcakes</item>
     </plurals>
 
-    <string name="order_details">Cantidad: %1$s \nSabor: %2$s \nFecha de recolección: %3$s \nTotal: %4$s \n\n¡Gracias!</string>
+    <string name="order_details">Cantidad: %1$s \nSabor: %2$s \nFecha de recolección: %3$s \nTotal: %4$s \nInstrucciones de preparación: %5$s \nInstrucciones de recolección: %6$s \n\n¡Gracias!</string>
     <string name="new_cupcake_order">Nueva orden de Cupcakes</string>
     <string name="quantity">Cantidad</string>
     <string name="flavor">Sabor</string>

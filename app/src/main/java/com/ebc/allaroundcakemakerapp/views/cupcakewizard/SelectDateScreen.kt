@@ -3,20 +3,28 @@ package com.ebc.allaroundcakemakerapp.views.cupcakewizard
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.ebc.allaroundcakemakerapp.R
@@ -67,6 +75,25 @@ fun SelectDateScreen(navController: NavController, cakeMakerViewModel: CakeMaker
                     Text(item)
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            TextField(
+                value = cakeMakerViewModel.state.pickupInstructions,
+                onValueChange = {
+                    cakeMakerViewModel.onValue(it, "pickupInstructions")
+                },
+                label = { Text(stringResource(R.string.extra_instructions)) },
+                maxLines = Int.MAX_VALUE,
+                keyboardOptions = KeyboardOptions(
+                    keyboardType = KeyboardType.Text,
+                    imeAction = ImeAction.Done
+                ),
+                textStyle = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(100.dp)
+                    .verticalScroll(rememberScrollState())
+            )
+            Spacer(modifier = Modifier.height(16.dp))
             Divider(
                 thickness = 1.dp,
                 modifier = Modifier.padding(bottom = 16.dp)

@@ -44,7 +44,9 @@ fun OrderSummaryScreen(navController: NavController, cakeMakerViewModel: CakeMak
         numberOfCupcakes,
         cakeMakerViewModel.state.flavor,
         cakeMakerViewModel.state.pickupDate,
-        cakeMakerViewModel.state.quantity
+        cakeMakerViewModel.state.quantity,
+        cakeMakerViewModel.state.extraInstructions,
+        cakeMakerViewModel.state.pickupInstructions
     )
     val newOrder = stringResource(R.string.new_cupcake_order)
 
@@ -54,7 +56,9 @@ fun OrderSummaryScreen(navController: NavController, cakeMakerViewModel: CakeMak
         // Summary line 2: display selected flavor
         Pair(stringResource(R.string.flavor), cakeMakerViewModel.state.flavor),
         // Summary line 3: display selected pickup date
-        Pair(stringResource(R.string.pickup_date), cakeMakerViewModel.state.pickupDate)
+        Pair(stringResource(R.string.pickup_date), cakeMakerViewModel.state.pickupDate),
+        Pair(stringResource(R.string.extra_instructions), cakeMakerViewModel.state.extraInstructions),
+        Pair(stringResource(R.string.pickup_instructions), cakeMakerViewModel.state.pickupInstructions)
     )
 
     Column(

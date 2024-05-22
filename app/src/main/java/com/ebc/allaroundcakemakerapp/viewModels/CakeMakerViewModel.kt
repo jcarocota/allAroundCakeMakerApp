@@ -20,6 +20,8 @@ class CakeMakerViewModel: ViewModel() {
             "price" -> state = state.copy(price = value.toDouble())
             "total" -> state = state.copy(total = value.toDouble())
             "pickupDate" -> state = state.copy(pickupDate = value)
+            "extraInstructions" -> state = state.copy(extraInstructions = value)
+            "pickupInstructions" -> state = state.copy(pickupInstructions = value)
         }
     }
 
